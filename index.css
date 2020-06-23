@@ -1,0 +1,248 @@
+/* section 1  */
+.Body
+{
+	background-color: transparent;
+	
+}
+
+.navbar
+{
+   background-color: rgba(183, 183, 183, 0.26);
+
+}
+
+.nav-item
+{
+	padding: 3px;
+	font: bold;
+	font-size: 20px;
+	color: rgba(221, 217, 217, 0.6);
+
+}
+
+.nav-item:hover
+{
+	background-color:#1E423F;
+	border-radius: 12px;
+
+}
+
+.SectionOne
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.2) 50%, #000000 100%), url(img/bg1.jpg); 
+}
+
+
+
+
+.parallax-innerOne {
+	padding-top: 50px;
+	padding-bottom: 30%;
+}
+
+
+.IdCard
+{
+	margin-top: 150px;
+	border: 1px solid #fff; 
+	height: 400px;
+	-webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+	box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+	background-color: rgba(179, 167, 167, 0.29);
+	position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    
+   
+   
+}
+
+
+
+
+
+
+.rounded-circle
+{
+	margin-top: 50px;
+	width: 100px;
+    height: 100px;
+	margin-left:  auto;
+	margin-right: auto;
+}
+
+
+.SocialMedia
+{
+	color:#1E423F;
+	margin: 5px;
+	font-size: 30px;
+	margin-top: 10px;
+	
+	
+	
+}
+
+.fa-facebook:hover,
+.fa-github:hover
+{
+	
+	color: rgba(224, 228, 228, 0.6);
+	
+	
+	
+}
+
+
+
+/*brack line*/
+
+.parallax
+{
+	height: 1px;
+	background-color: black;
+	box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+	-webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+}
+
+/* section 2 */
+
+.SectionTwo{
+background-color: black;
+	
+	
+	
+}
+
+
+.parallax-innerTwo
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+
+.SkillsHeading
+{
+	color:rgba(224, 228, 228, 0.6);
+	text-align: center;
+	
+}
+
+
+.ProgressBar
+{
+	width: 400px;
+	margin: 50px ;
+	color:rgba(224, 228, 228, 0.5);
+	
+}
+
+.title
+{
+	color:rgba(224, 228, 228, 0.6);
+
+}
+
+
+.progress-bar 
+{
+	
+  width: 0;
+	
+
+  animation: progress 5s ease-in-out forwards;
+  .title {
+	  
+    opacity: 0;
+    animation: show 5s forwards ease-in-out 5s;
+  }
+  
+} 
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+} 
+@keyframes show  {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* section 3 */
+
+.SectionThree
+{
+	height: 1000px;
+	background: url(img/bg2.jpg) fixed 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+
+/* section 4 */
+
+
+.SectionFour
+{
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.2) 5%, #000000 100%), url(img/bg3.jpg); 
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+footer
+{
+	padding-top: 30px;
+
+}
+
+.mb-4
+{
+	color: rgba(221, 217, 217, 0.6);
+	background-color: rgba(221, 217, 217, 0.11);
+	border: solid 2px;
+	border-color: rgba(221, 217, 217, 0.6); 
+	
+}
+
+
+
+
+.footer-copyright
+{
+	color: rgba(221, 217, 217, 0.6);
+	
+}
+
+
+
+
+
+
+
+	  
+	  
+	  
+	  
+	  

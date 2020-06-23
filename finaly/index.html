@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | RUNNER</title> 
+        <link rel="shortcut icon" href="TemplateData/favicon.ico">
+        <link rel="stylesheet" href="TemplateData/style.css">
+
+    <script src="Build/UnityLoader.js"></script>
+    <script src="https://connect.facebook.net/en_US/fbinstant.6.3.js"></script>
+    
+
+    <script>
+    var switchh=true;   
+    var gameInstance;
+    var preloadedInterstitial;
+    var preloadedRewardedVideo;
+    UnityLoader.SystemInfo.mobile = false;
+
+    var base64Picture;
+    var bestScore;
+    var myRank;
+
+    const leaderBoard = "BestPlayers"; //LeaderBoard name here.
+    const contextLeaderBoard = "ContextLB"; // Contextuel LeaderBoard name here.
+
+    var adID_1 = ""; // 1st placement ID here
+    var adID_2 = ""; // 2nd placement ID here
+
+    
+
+
+
+    function UnityProgress(gameInstance, progress) {
+    if (!gameInstance.Module)
+    return;
+    FBInstant.setLoadingProgress(progress*100);
+    if (progress == 1)
+    {
+     FBInstant.startGameAsync()
+    .then(function() {
+   console.log('Game Started');
+  });
+  }
+}
+
+
+    FBInstant.initializeAsync().then(function() { 
+      gameInstance = UnityLoader.instantiate("gameContainer", "Build/finaly.json", {onProgress: UnityProgress});
+       });
+
+       function GetPlayerName()
+       {
+          gameInstance.SendMessage('CANVAS','ReceiveUserName',FBInstant.player.getName());
+       }
+
+       function GetPlayerPhoto()
+       {
+          gameInstance.SendMessage('CANVAS','ReceiveUserPhoto',FBInstant.player.getPhoto());
+       }
+
+      function GetPlayerRank()
+       {
+        FBInstant
+        .getLeaderboardAsync('BestPlayers')
+        .then(leaderboard => leaderboard.getPlayerEntryAsync())
+        .then(entry => {
+
+          gameInstance.SendMessage('CANVAS','ReceiveRank', entry.getRank());
+
+      }).catch(error => console.error(error));
+       }
+
+
+       function RequestTopScores(LBName,numb)
+       {
+          FBInstant
+        .getLeaderboardAsync(LBName)
+        .then(leaderboard => leaderboard.getEntriesAsync(numb, 0))
+        .then(entries => {
+        if(entries.length>0)
+        {
+        var rettt="";
+        for (var i = 0; i < entries.length; i++) {
+              rettt= rettt+entries[i].getRank()+"|"+entries[i].getPlayer().getName()+"|"+entries[i].getScore()+"|"+entries[i].getPlayer().getPhoto()+"|" ;
+          }
+          gameInstance.SendMessage('CANVAS','ReceiveScore',rettt);
+        }
+      }).catch(error => console.error(error));
+
+       }
+
+
+       function RequestOwnScore(LBName)
+       {
+          FBInstant
+        .getLeaderboardAsync(LBName)
+        .then(leaderboard => leaderboard.getPlayerEntryAsync())
+        .then(entry => {
+
+          gameInstance.SendMessage('CANVAS','ReceiveOwnScore', entry.getScore());
+
+      }).catch(error => console.error(error));
+
+       }
+
+
+        function AddNewScore(LBName,score)
+    {
+      FBInstant
+          .getLeaderboardAsync(LBName)
+          .then(leaderboard => {
+          return leaderboard.setScoreAsync(score,FBInstant.player.getName());
+        })
+      . then(() => console.log('Score saved'))
+        .catch(error => console.error(error));
+
+
+    }
+
+        function toDataURL(src, callback, outputFormat) {
+              var img = new Image();
+              img.crossOrigin = 'Anonymous';
+              img.onload = function() {
+                var canvas = document.createElement('CANVAS');
+                var ctx = canvas.getContext('2d');
+                var dataURL;
+                canvas.height = this.naturalHeight;
+                canvas.width = this.naturalWidth;
+                ctx.drawImage(this, 0, 0);
+                dataURL = canvas.toDataURL(outputFormat);
+                callback(dataURL);
+              };
+              img.src = src;
+              if (img.complete || img.complete === undefined) {
+                img.src = "data:image/jpeg;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+                img.src = src;
+              }
+            }
+
+            toDataURL(
+              'profile_pic.png',
+              function(dataUrl) {
+                base64Picture = dataUrl;
+              }
+            )
+
+
+
+    
+    function ReqInt(idd)
+    {
+      preloadedInterstitial = null;
+
+      FBInstant.getInterstitialAdAsync(
+        idd, // Your Ad Placement Id
+      ).then(function(interstitial) {
+        // Load the Ad asynchronously
+          preloadedInterstitial = interstitial;
+          return preloadedInterstitial.loadAsync();
+      }).then(function() {
+          gameInstance.SendMessage('CANVAS','INTLoaded');
+      }).catch(function(err){
+          console.error('Interstitial failed to preload: ' + err.message);
+      });
+    }
+
+
+
+    function ReqRwd(idd)
+    {
+
+      preloadedRewardedVideo = null;
+      if(switchh){
+      FBInstant.getRewardedVideoAsync(
+          "2371309826459374_2389355141321509", // Your Ad Placement Id
+      ).then(function(rewarded) {
+          // Load the Ad asynchronously
+          preloadedRewardedVideo = rewarded;
+          return preloadedRewardedVideo.loadAsync();
+      }).then(function() {
+          gameInstance.SendMessage('CANVAS','RWDLoaded');
+      }).catch(function(err){
+          console.error('Rewarded video failed to preload: ' + err.message);
+      });
+      switchh=false;
+    }
+    else{
+      FBInstant.getRewardedVideoAsync(
+          "2371309826459374_2389356154654741", // Your Ad Placement Id
+      ).then(function(rewarded) {
+          // Load the Ad asynchronously
+          preloadedRewardedVideo = rewarded;
+          return preloadedRewardedVideo.loadAsync();
+      }).then(function() {
+          gameInstance.SendMessage('CANVAS','RWDLoaded');
+      }).catch(function(err){
+          console.error('Rewarded video failed to preload: ' + err.message);
+      });
+      switchh=true;
+    }
+    }
+
+
+    function ShowInt(idd)
+    {
+      preloadedInterstitial.showAsync()
+      .then(function() {
+          // Perform post-ad success operation
+          gameInstance.SendMessage('CANVAS','INTshown');      
+      })
+.     catch(function(e) {
+          console.error(e.message);
+      });
+    }
+
+
+    function ShowRwd(idd)
+    {
+      preloadedRewardedVideo.showAsync()
+      .then(function() {
+          // Perform post-ad success operation
+          gameInstance.SendMessage('CANVAS','RWDshown');
+      })
+      .catch(function(e) {
+          console.error(e.message);
+      });
+    }
+
+
+
+    function RequestChallenge()
+    {
+      console.log('ChallengeMe called')
+
+      FBInstant.shareAsync({
+        intent: 'CHALLENGE',
+        image: base64Picture,
+        text: 'I just set a new score: '+ bestScore
+        }).then(() => {
+        console.log('Share dialog shown...')
+        }).catch(error => console.error('shareScore Error: ' + error.message))
+
+    }
+
+    </script>
+  </head>
+  
+  <body>
+  <div class="webgl-content" style="width: 100%; height: 100%">
+    <div id="gameContainer" style="width: 100%; height:100%; margin: 0"></div>
+    </div>
+  </body>
+  
+</html>
