@@ -5,29 +5,58 @@
 	
 }
 
-.navbar
-{
-   background-color: rgba(183, 183, 183, 0.26);
-
+.navbar {
+    transition: all 0.4s;
 }
 
-.nav-item
-{
-	padding: 3px;
-	font: bold;
-	font-size: 20px;
-	color: rgba(221, 217, 217, 0.6);
-
+.navbar .nav-link {
+    color: black;
 }
 
-.nav-item:hover
-{
-	background-color:#1E423F;
-	border-radius: 12px;
-
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
 }
 
-.SectionOne
+
+
+/* Change navbar styling on scroll */
+.navbar.active {
+    background: black;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar.active {
+    color: #555;
+}
+
+
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .navbar-toggler{
+	color: wheat;
+		
+	}
+
+    .navbar, .navbar .nav-link {
+        color: black;
+    }
+}
+
+
+.HomeSection
 {
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -65,7 +94,17 @@
 }
 
 
-
+.conactBox{
+	
+		-webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+	box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+		color: rgba(221, 217, 217, 0.6);
+	background-color: rgba(221, 217, 217, 0.11);
+border: 1px solid #fff;
+	
+	
+}
 
 
 
@@ -113,36 +152,122 @@
 	-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
 }
 
+
+
+
+
+
+.slantedLine{
+	position:relative;
+	height: 10px;
+}
+
+
+
+
+#top::after {
+content: "";
+    background: black;
+    height: 200px;
+    -webkit-transform: skewY(-5deg) ;
+    -ms-transform: skewY(-5deg);
+    transform: skewY(-5deg);
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+    right: 0;
+    z-index: 1;
+}
+
+
+#bootom::after {
+	
+content: "";
+    background: black;
+    height: 200px;
+    -webkit-transform: skewY(5deg) ;
+    -ms-transform: skewY(5deg);
+    transform: skewY(5deg);
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+    right: 0;
+    z-index: 1;
+	
+}
+
+.AboutSection{
+	
+	
+
+	color: white;
+	
+height: 700px;
+	background-color: black;
+	
+	
+	
+	
+}
+
+ .AboutSection h1, .SkillSection h1
+{
+	text-decoration: underline;
+	color: #555;
+	margin-top: 150px;	
+	
+}
+.AboutSection p, .AboutSection img
+{
+	margin-top:50px;
+	
+}
+.AboutSection img, .SkillSection img
+{
+    
+	width:400px;
+    height: 300px;
+	border-radius:50px;
+	
+}
+
 /* section 2 */
 
-.SectionTwo{
-background-color: black;
-	
-	
-	
+
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:700);
+
+.FixedBG
+{
+	height: 500px;
+	background: url(img/bg2.jpg) fixed 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+
 }
 
 
-.parallax-innerTwo
+.SkillSection
 {
+	background-color: black;
 	padding-top: 10px;
 	padding-bottom: 10px;
-
-}
-
-
-.SkillsHeading
-{
-	color:rgba(224, 228, 228, 0.6);
-	text-align: center;
+	height: 700px;
 	
 }
+.SkillSection img{
+	
+margin-top: 80px;	
+	
+	
+}
+
 
 
 .ProgressBar
 {
 	width: 400px;
-	margin: 50px ;
+	margin-top: 50px ;
 	color:rgba(224, 228, 228, 0.5);
 	
 }
@@ -190,24 +315,17 @@ background-color: black;
 
 /* section 3 */
 
-.SectionThree
-{
-	height: 1000px;
-	background: url(img/bg2.jpg) fixed 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-
-}
-
 
 /* section 4 */
 
 
-.SectionFour
+.ContactSection
 {
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.2) 5%, #000000 100%), url(img/bg3.jpg); 
 	background-repeat: no-repeat;
 	background-size: cover;
+	
+	
 
 }
 
@@ -216,16 +334,6 @@ footer
 	padding-top: 30px;
 
 }
-
-.mb-4
-{
-	color: rgba(221, 217, 217, 0.6);
-	background-color: rgba(221, 217, 217, 0.11);
-	border: solid 2px;
-	border-color: rgba(221, 217, 217, 0.6); 
-	
-}
-
 
 
 
