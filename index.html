@@ -76,7 +76,7 @@
 <!-- SectionOne -->
 		<section class="HomeSection" id="home">
 			<div class="parallax-innerOne">
-				<div class="IdCard container col-md-4 col-8   animated  flipInY    ">
+				<div class="IdCard container col-md-4 col-12 animated flipInY">
 					<div class=" card-up lighten-1"></div>
 				
 					<div class="avatar mx-auto ">
@@ -84,7 +84,7 @@
 					</div>
 					
 					<div class="" align="center">
-						<h4 class=" animate__animated animate__pulse animate__repeat">
+						<h4 class="animate__animated animate__pulse animate__repeat">
 							Ghadeer Abbadi
 						</h4>
 						<hr>
@@ -239,7 +239,7 @@
 					</p>
 					<div class="row">
 						<div class="col-md-9 mb-md-0 mb-5">
-							<form id="contact-form" name="contact-form" action="mail.php" method="POST">
+							<form id="contact-form" name="contact-form" action="mail.php" method="post">
 								<div class="row">
 									<div class="col-md-6">
 										<div class="md-form mb-0">
@@ -269,11 +269,10 @@
 										</div>
 									</div>
 								</div>
-							
-							
-							<button class="btn"type="submit" name="submit"style="background-color: #1E423F; color: azure;"> 
-								Send</button>
-							
+				
+								<button class="btn" type="submit" name="submit" style="background-color: #1E423F; color: azure;"> 
+							    Send
+								</button>
 							</form>
 
             
@@ -291,13 +290,15 @@
 									<p>Amman, Jordan</p>
 								</li>
 								<li><i class="fas fa-envelope mt-4 fa-2x" style="color: #1E423F"></i>
-									<p>ghadeer.abbadi122@gmail.com</p>
+									<p class="mt-4 fa-2x">ghadeer.abbadi122@gmail.com</p>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</section>
-				<div class="footer-copyright text-center py-3">© 2020 Copyright: Ghadeer Abbadi
+				
+				<div class="footer-copyright text-center py-3">
+					© 2020 Copyright: Ghadeer Abbadi
 				</div>
 			</footer>
 		</section>
@@ -306,7 +307,7 @@
 		<script>
 			function validateForm()
 			{
-				var name =  document.getElementById('name').value;
+			/*	var name =  document.getElementById('name').value;
 				if (name == "")
 				{
 					document.querySelector('.status').innerHTML = "Name cannot be empty";
@@ -345,24 +346,31 @@
 					return false;
                 }
 				
-			/*	document.querySelector('.status').innerHTML = "Sending...";*/
+				document.querySelector('.status').innerHTML = "Sending...";*/
 			}
 		
 		</script>
 		
-<script>
-		
-		$(function () {
-    $(window).on('scroll', function () {
-        if ( $(window).scrollTop() > 10 ) {
-            $('.navbar').addClass('active');
-        } else {
-            $('.navbar').removeClass('active');
-        }
-    });
-});
-		
-		
+		<script>
+			/* nav scroll code*/
+			$(function ()
+			  {
+				$(window).on('scroll', function()
+				
+				{
+					
+					if ( $(window).scrollTop() > 10 ) 
+					
+					{
+						$('.navbar').addClass('active');
+						
+					} 
+					else
+					{
+						$('.navbar').removeClass('active');
+                    }
+               });
+            });
 		</script>
 		
 		<script>
@@ -413,11 +421,13 @@ $(document).ready(function(){
 
 
 			<script>
- 	AOS.init({
+				/* animation */
+				
+				AOS.init({
 				easing: 'ease-out-back',
 				duration: 1000
 			});
-</script>
+           </script>
 		 
   
 
