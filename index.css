@@ -7,7 +7,8 @@
 
 .navbar
 {
-    transition: all 2s;
+    transition: all;
+	transition-duration: 2s;
 }
 
 .navbar .nav-link 
@@ -208,6 +209,8 @@ content: "";
 	color: white;
 	height: 700px;
 	background-color: black;
+	font-size: 25px;
+	line-height: 1.6;
 	
 }
 
