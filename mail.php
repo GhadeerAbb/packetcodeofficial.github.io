@@ -1,6 +1,7 @@
 <?php
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+if(isset( $_POST["submit"])){
 
 $Name = $_POST['name'];
 $Email = $_POST['email'];
@@ -11,6 +12,8 @@ $to = "ghadeer.abbadi122@gmail.com";
 mail($to, $Name, $Email, $Phone, $Message);
 	echo"done";
 }
+
+
 
 ?>
 
