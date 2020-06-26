@@ -1,20 +1,23 @@
-/* section 1  */
+
 .Body
 {
 	background-color: transparent;
 	
 }
 
-.navbar {
-    transition: all 0.4s;
+.navbar
+{
+    transition: all 2s;
 }
 
-.navbar .nav-link {
+.navbar .nav-link 
+{
     color: black;
 }
 
 .navbar .nav-link:hover,
-.navbar .nav-link:focus {
+.navbar .nav-link:focus 
+{
     color: #fff;
     text-decoration: none;
 }
@@ -22,22 +25,26 @@
 
 
 /* Change navbar styling on scroll */
-.navbar.active {
+.navbar.active
+{
     background: black;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar.active .nav-link {
+.navbar.active .nav-link 
+{
     color: #555;
 }
 
 .navbar.active .nav-link:hover,
-.navbar.active .nav-link:focus {
+.navbar.active .nav-link:focus 
+{
     color: #fff;
     text-decoration: none;
 }
 
-.navbar.active {
+.navbar.active
+{
     color: #555;
 }
 
@@ -66,7 +73,8 @@
 
 
 
-.parallax-innerOne {
+.parallax-innerOne 
+{
 	padding-top: 50px;
 	padding-bottom: 30%;
 }
@@ -94,14 +102,15 @@
 }
 
 
-.conactBox{
-	
-		-webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+.conactBox
+{
+
+	-webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
 	-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
 	box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
-		color: rgba(221, 217, 217, 0.6);
+	color: rgba(221, 217, 217, 0.6);
 	background-color: rgba(221, 217, 217, 0.11);
-border: 1px solid #fff;
+	border: 1px solid #fff;
 	
 	
 }
@@ -153,11 +162,8 @@ border: 1px solid #fff;
 }
 
 
-
-
-
-
-.slantedLine{
+.slantedLine
+{
 	position:relative;
 	height: 10px;
 }
@@ -180,9 +186,10 @@ content: "";
 }
 
 
-#bootom::after {
+#bootom::after 
+{
 	
-content: "";
+    content: "";
     background: black;
     height: 200px;
     -webkit-transform: skewY(5deg) ;
@@ -196,17 +203,11 @@ content: "";
 	
 }
 
-.AboutSection{
-	
-	
-
+.AboutSection
+{
 	color: white;
-	
-height: 700px;
+	height: 700px;
 	background-color: black;
-	
-	
-	
 	
 }
 
@@ -229,9 +230,10 @@ height: 700px;
     height: 300px;
 	border-radius:50px;
 	
+	
 }
 
-/* section 2 */
+
 
 
 
@@ -313,10 +315,6 @@ margin-top: 80px;
 
 
 
-/* section 3 */
-
-
-/* section 4 */
 
 
 .ContactSection
