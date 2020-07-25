@@ -25,6 +25,12 @@ height: 100%;
 {
     color: #fff;
     text-decoration: none;
+	background: silver;
+    border-radius: 5px;
+    box-shadow: 0 0 5px silver,
+                0 0 25px silver,
+                0 0 50px silver,
+                0 0 100px silver;
 }
 
 
@@ -98,7 +104,7 @@ height: 100%;
 .IdCard
 {
 	margin-top: 150px;
-	border: 1px solid #fff; 
+	border: 1px solid transparent; 
 	height: 400px;
 	-webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
 	-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
@@ -116,7 +122,7 @@ height: 100%;
    
 }
 
-
+/*
 .conactBox
 {
 
@@ -129,7 +135,7 @@ height: 100%;
 	
 	
 }
-
+*/
 
 
 .rounded-circle
@@ -147,7 +153,7 @@ height: 100%;
 	color:#1E423F;
 	margin: 5px;
 	font-size: 30px;
-	margin-top: 10px;
+	
 	
 	
 	
@@ -157,7 +163,7 @@ height: 100%;
 .fa-github:hover
 {
 	
-	color: rgba(224, 228, 228, 0.6);
+	/*color: rgba(224, 228, 228, 0.6);*/
 	
 	
 	
@@ -181,13 +187,28 @@ height: 100%;
 {
 	position:relative;
 	height: 10px;
+
 }
 
 
 
+#top p {
+	height: 50px;
+	font-family: Oswald, sans-serif;
+	font-size: 300px;
+	line-height: 0;
+	position: absolute;
+	bottom: 150px;
+	left: 5px;
+	transform: rotateZ(8deg);
+	color: black;
+
+	
+}
 
 #top::after {
-content: "";
+
+	content: "";
     background: black;
     height: 200px;
     -webkit-transform: skewY(-5deg) ;
@@ -226,32 +247,52 @@ content: "";
 	font-size: 25px;
 	line-height: 1.6;
 	
-}
-
- .AboutSection h1, .SkillSection h1
-{
-	text-decoration: underline;
-	color: #555;
-	margin-top: 150px;	
 	
 }
-.AboutSection p, .AboutSection img
-{
-	margin-top:50px;
+..SkillSection h1{
+	
 	
 }
-.AboutSection img, .SkillSection img
+ .AboutSection h1 
 {
-    margin-right: 10px;
+	/*border: solid 2px;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	
+	border-color: red;
+	border-radius: 200px;
+	*/
+	  writing-mode: vertical-lr; 
 
 	
-border: 10px solid rgba(224, 228, 228, 0.2);
+  
+height: 50px;
+	margin-top: 500px;
+	letter-spacing: 50px;
+	/*text-decoration:underline;*/
+	color: silver;
 
-border-top-color: transparent;
-
-border-right-color: transparent;
+	background-color: blue;
+	text-align: right;
 
 	
+}
+
+./*AboutSection h1:focus, .SkillSection h1:focus
+{
+position:inherit;
+   color: #fff;
+    text-decoration: none;
+	background: silver;
+	width: 100px;
+	height: 100px;
+  
+
+
+}*/
+.AboutSection p{
+	margin: 200px 20px 20px 20px;
 	
 }
 
@@ -264,10 +305,24 @@ border-right-color: transparent;
 .FixedBG
 {
 	height: 500px;
-	background: url(img/bg2.jpg) fixed 100%;
+	background: url(img/333.jpg) fixed 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-name: line red 1s;
+	
+}
 
+@keyframes line{
+   0% {
+      left: -5%;
+    }
+    50%,100% {
+      left: 50%;
+    }
+	
+	
 }
 
 
@@ -279,31 +334,42 @@ border-right-color: transparent;
 	height: 700px;
 	
 }
-.SkillSection img{
-	
-margin-top: 80px;	
 
+
+.Progress{
+	height: 5px;
+	border-radius: 5px;
+	background-color: silver;
+	
 	
 }
-
-
 .ProgressBar
 {
 	width: 400px;
 	margin-top: 50px ;
-	color:rgba(224, 228, 228, 0.5);
+	color:rgba(224, 228, 228, 0.6);
+	
+	
+}
+.title{
+	color:rgba(224, 228, 228, 0.6);
+text-align: left;	
 	
 }
 
-.title
+.percentage
 {
 	color:rgba(224, 228, 228, 0.6);
+	text-align: right;
 
 }
 
 
 .progress-bar 
 {
+	
+	border-radius: 5px;
+	height: 5px;
 	
   width: 0;
 	
@@ -348,9 +414,15 @@ margin-top: 80px;
 
 }
 
-footer
+.footer_txt{
+	
+background-color: black;
+	
+}
+.x
 {
 	padding-top: 30px;
+	height: 700px;
 
 }
 
@@ -368,6 +440,99 @@ footer
 
 
 
+/**/
+
+
+  .IdCard a:hover, .myMail:hover{
+    background: silver;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px silver,
+                0 0 25px silver,
+                0 0 50px silver,
+                0 0 100px silver;
+  }
+  
+  .IdCard  span {
+    position: absolute;
+    display: block;
+  }
+  /*
+  .IdCard span:nth-child(1) {
+    top: 0;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, silver);
+    animation: anim1 1s linear infinite;
+  }
+  
+  @keyframes anim1 {
+    0% {
+      left: -5%;
+    }
+    50%,100% {
+      left: 50%;
+    }
+  }
+  
+  .IdCard  span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 50%;
+    background: linear-gradient(180deg, transparent, silver);
+    animation: anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes anim2 {
+    0% {
+      top: -5%;
+    }
+    50%,100% {
+      top: 50%;
+    }
+  }
+  
+  .IdCard  span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, silver);
+    animation: anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes anim3 {
+    0% {
+      right: -5%;
+    }
+    50%,100% {
+      right: 50%;
+    }
+  }
+  
+  .IdCard  span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 50%;
+    background: linear-gradient(360deg, transparent, silver);
+    animation: anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+ 
+  @keyframes anim4 {
+    0% {
+      bottom:-5%;
+    }
+    50%,100% {
+      bottom: 50%;
+    }
+  }
+  
+*/
 	  
 	  
 	  
