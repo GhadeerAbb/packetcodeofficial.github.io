@@ -122,20 +122,9 @@ height: 100%;
    
 }
 
-/*
-.conactBox
-{
 
-	-webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
-	-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
-	box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
-	color: rgba(221, 217, 217, 0.6);
-	background-color: rgba(221, 217, 217, 0.11);
-	border: 1px solid #fff;
-	
-	
-}
-*/
+
+
 
 
 .rounded-circle
@@ -159,17 +148,6 @@ height: 100%;
 	
 }
 
-.fa-facebook:hover,
-.fa-github:hover
-{
-	
-	/*color: rgba(224, 228, 228, 0.6);*/
-	
-	
-	
-}
-
-
 
 /*brack line*/
 
@@ -185,6 +163,7 @@ height: 100%;
 
 .slantedLine
 {
+	
 	position:relative;
 	height: 10px;
 
@@ -192,16 +171,17 @@ height: 100%;
 
 
 
-#top p{
+.topic{
 	height: 50px;
 	font-family: Oswald, sans-serif;
 	font-size: 300px;
 	line-height: 0;
 	position: absolute;
-	bottom: 150px;
+	bottom: 50px;
 	left: 5px;
 	transform: rotateZ(8deg);
 	color: black;
+	text-shadow: -1px 4px 26px 11px silver;
 
 	
 }
@@ -249,10 +229,7 @@ height: 100%;
 	
 	
 }
-..SkillSection h1{
-	
-	
-}
+
  .AboutSection h1 
 {
 
@@ -313,7 +290,7 @@ height: 50px;
 	background-color: black;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	height: 700px;
+	height: 900px;
 	
 }
 
@@ -386,8 +363,11 @@ text-align: left;
 
 
 
-.ContactSection
+.portfolioSection
 {
+	padding-top: 30px;
+	height: 700px;
+
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.2) 5%, #000000 100%), url(img/bg3.jpg); 
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -396,18 +376,19 @@ text-align: left;
 
 }
 
+.portfolioSection p{
+	margin-top: 200px;
+	font-size: 50px;
+     color: gray;
+	
+	
+}
+
 .footer_txt{
 	
 background-color: black;
 	
 }
-.x
-{
-	padding-top: 30px;
-	height: 700px;
-
-}
-
 
 
 .footer-copyright
