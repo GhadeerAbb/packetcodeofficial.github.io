@@ -1,8 +1,8 @@
-html{
-height: 100%;	
-	
-	
+html
+{
+	height: 100%;	
 }
+
 .Body
 {
 	background-color: transparent;
@@ -62,13 +62,15 @@ height: 100%;
 
 
 /* Change navbar styling on small viewports */
-@media (max-width: 991.98px) {
-    .navbar-toggler{
-	color: wheat;
-		
+@media (max-width: 991.98px) 
+{
+    .navbar-toggler
+	{
+		color: wheat;
 	}
 
-    .navbar, .navbar .nav-link {
+    .navbar, .navbar .nav-link
+	{
         color: black;
     }
 }
@@ -77,27 +79,24 @@ height: 100%;
 .HomeSection
 {
 
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.3) 0%,rgba(0, 0, 0, 0.2) 50%,#000000),url(img/bg1.jpg); 
 	
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.2) 50%, #000000 ), url(img/bg1.jpg) ; 
 	
+	/* Full height */
+    height: 100%; 
 
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    /* Center and scale the image nicely */
+  
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
 }
-
-
 
 
 .parallax-innerOne 
 {
 	padding-top: 50px;
-	padding-bottom: 30%;
+	padding-bottom: 200px;
 }
 
 
@@ -117,17 +116,23 @@ height: 100%;
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    
-   
-   
 }
 
+.IdCard a:hover
+{
+	text-decoration: none;
+    background: silver;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px silver,
+                0 0 25px silver,
+                0 0 50px silver,
+                0 0 100px silver;
+  }
+  
 
 
-
-
-
-.rounded-circle
+.rounded-circle   /* my img */
 {
 	margin-top: 50px;
 	width: 100px;
@@ -136,20 +141,18 @@ height: 100%;
 	margin-right: auto;
 }
 
-
 .SocialMedia
 {
-	color:#1E423F;
+	
 	margin: 5px;
 	font-size: 30px;
-	
-	
+	text-decoration: none;
 	
 	
 }
 
 
-/*brack line*/
+/*break line*/
 
 .parallax
 {
@@ -163,31 +166,27 @@ height: 100%;
 
 .slantedLine
 {
-	
-	position:relative;
+	position: relative;
 	height: 10px;
-
 }
 
 
 
-.topic{
+.topic
+{
 	height: 50px;
 	font-family: Oswald, sans-serif;
-	font-size: 300px;
 	line-height: 0;
 	position: absolute;
 	bottom: 50px;
 	left: 5px;
-	transform: rotateZ(8deg);
-	color: black;
-	text-shadow: -1px 4px 26px 11px silver;
+	transform: skewY(-5deg);
+	color:darkgray;
 
-	
 }
 
-#top::after {
-
+#top::after 
+{
 	content: "";
     background: black;
     height: 200px;
@@ -204,8 +203,7 @@ height: 100%;
 
 #bootom::after 
 {
-	
-    content: "";
+	content: "";
     background: black;
     height: 200px;
     -webkit-transform: skewY(5deg) ;
@@ -226,33 +224,12 @@ height: 100%;
 	background-color: black;
 	font-size: 25px;
 	line-height: 1.6;
-	
-	
 }
 
- .AboutSection h1 
+
+.AboutSection p
 {
-
-	  writing-mode: vertical-lr; 
-
-	
-  
-height: 50px;
-	margin-top: 500px;
-	letter-spacing: 50px;
-	
-	color: silver;
-
-	background-color: blue;
-	text-align: right;
-
-	
-}
-
-
-.AboutSection p{
 	margin: 200px 20px 20px 20px;
-	
 }
 
 
@@ -269,8 +246,6 @@ height: 50px;
 	background-size: cover;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
-	animation-name: line red 1s;
-	
 }
 
 @keyframes line{
@@ -295,32 +270,31 @@ height: 50px;
 }
 
 
-.Progress{
+.Progress
+{
 	height: 5px;
 	border-radius: 5px;
 	background-color: silver;
-	
-	
 }
+
+
 .ProgressBar
 {
 	width: 400px;
 	margin-top: 50px ;
 	color:rgba(224, 228, 228, 0.6);
-	
-	
 }
-.title{
+
+.title
+{
 	color:rgba(224, 228, 228, 0.6);
-text-align: left;	
-	
+    text-align: left;	
 }
 
 .percentage
 {
 	color:rgba(224, 228, 228, 0.6);
 	text-align: right;
-
 }
 
 
@@ -329,94 +303,64 @@ text-align: left;
 	
 	border-radius: 5px;
 	height: 5px;
-	
-  width: 0;
-	
-
-  animation: progress 5s ease-in-out forwards;
-  .title {
-	  
-    opacity: 0;
-    animation: show 5s forwards ease-in-out 5s;
-  }
+	width: 0;
+	animation: progress 5s ease-in-out forwards;
+    .title 
+	{
+		opacity: 0;
+        animation: show 5s forwards ease-in-out 5s;
+    }
   
 } 
 
-@keyframes progress {
-  from {
+@keyframes progress 
+{
+  from 
+	{
     width: 0;
-  }
-  to {
+    }
+  to 
+	{
     width: 100%;
-  }
+    }
 } 
-@keyframes show  {
-  from {
+
+@keyframes show  
+{
+  from 
+	{
     opacity: 0;
-  }
-  to {
+    }
+  to 
+	{
     opacity: 1;
-  }
+    }
 }
-
-
-
-
 
 .portfolioSection
 {
 	padding-top: 30px;
 	height: 700px;
-
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.2) 5%, #000000 100%), url(img/bg3.jpg); 
+	background:linear-gradient(to bottom,rgba(0, 0, 0, 0.3) 0%,rgba(0, 0, 0, 0.2) 5%,#000000 100%),url(img/bg3.jpg); 
 	background-repeat: no-repeat;
 	background-size: cover;
-	
-	
-
 }
 
-.portfolioSection p{
+.portfolioSection p
+{
 	margin-top: 200px;
 	font-size: 50px;
-     color: gray;
-	
-	
+    color: gray;
 }
 
-.footer_txt{
-	
-background-color: black;
-	
+.footer_txt
+{
+	background-color: black;
 }
 
 
 .footer-copyright
 {
 	color: rgba(221, 217, 217, 0.6);
-	
 }
 
-
-
-
-  .IdCard a:hover, .myMail:hover{
-    background: silver;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px silver,
-                0 0 25px silver,
-                0 0 50px silver,
-                0 0 100px silver;
-  }
-  
-  .IdCard  span {
-    position: absolute;
-    display: block;
-  }
-
-	  
-	  
-	  
-	  
-	  
