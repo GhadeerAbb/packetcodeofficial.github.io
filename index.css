@@ -104,7 +104,6 @@ html
 {
 	margin-top: 150px;
 	border: 1px solid transparent; 
-	height: 400px;
 	-webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
 	-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
 	box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
@@ -152,25 +151,6 @@ html
 }
 
 
-/*break line*/
-
-.parallax
-{
-	height: 1px;
-	background-color: black;
-	box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
-	-webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
-	-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
-}
-
-
-.slantedLine
-{
-	position: relative;
-	height: 10px;
-}
-
-
 
 .topic
 {
@@ -189,33 +169,18 @@ html
 {
 	content: "";
     background: black;
-    height: 200px;
-    -webkit-transform: skewY(-5deg) ;
-    -ms-transform: skewY(-5deg);
-    transform: skewY(-5deg);
+    height: 100px;
+    -webkit-transform: skewY(-2deg) ;
+    -ms-transform: skewY(-2deg);
+    transform: skewY(-2deg);
     position: absolute;
     left: 0;
-    bottom: -100px;
+    bottom: -50px;
     right: 0;
     z-index: 1;
 }
 
 
-#bootom::after 
-{
-	content: "";
-    background: black;
-    height: 200px;
-    -webkit-transform: skewY(5deg) ;
-    -ms-transform: skewY(5deg);
-    transform: skewY(5deg);
-    position: absolute;
-    left: 0;
-    bottom: -100px;
-    right: 0;
-    z-index: 1;
-	
-}
 
 .AboutSection
 {
@@ -229,7 +194,7 @@ html
 
 .AboutSection p
 {
-	margin: 200px 20px 20px 20px;
+	margin: 20px 20px 20px 20px;
 }
 
 
